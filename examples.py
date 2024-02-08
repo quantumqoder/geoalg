@@ -1,0 +1,32 @@
+from src.blade import Blade, Trivector, Vector, gen_num_base_blades
+from src.multivector import Multivector
+
+m1 = Multivector(range(1, 5))
+print(m1)
+print(repr(m1))
+print(-m1)
+print(~m1)
+print(len(m1))
+m2 = Multivector(range(1, 9))
+print(m2)
+print(m1 + m2)
+print(m2 + m1)
+print(m1 - m2)
+print(m2 - m1)
+b1 = Blade(1, range(1, 5))
+print(b1)
+b2 = Blade(2, range(1, 5))
+print(b2)
+print(repr(b2))
+v = Vector(range(1, 5))
+print(v)
+print(repr(v))
+t = Trivector(range(1, 5))
+print(t)
+print(repr(t))
+print(gen_num_base_blades(5))
+del t[2]
+print(t)
+print(repr(t))
+t.dim = 6
+print(repr(t))
